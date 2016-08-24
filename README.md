@@ -1,2 +1,4 @@
-# SIHO
+Sistema de Horários será uma aplicação produzida para plataforma Web, onde as principais linguagens de desenvolvimento utilizadas serão PHP (Hypertext Preprocessor) e Java Script. O banco de dados adotado para este projeto será o banco de dados Postgresql.
 Este sistema poderá ser utilizado no gerenciamento de horários, tais como: cadastrar grades de horário, bem como inserir cursos e permitir que o usuário selecione as disciplinas que deseja cursar durante o semestre; e ao final enviar um e-mail contendo as disciplinas que o aluno pretende frequentar.
+Neste projeto, com o objetivo de organizar o desenvolvimento e o código do sistema, será utilizado o padrão de arquitetura de software MVC (Model – View - Controller), que tem por objetivo a separação das tarefas, facilitando futuras manutenções no código; e o padrão de persistência de dados DAO (Data Access Object), que permite separar as regras de negócio das regras de acesso ao banco de dados.
+
