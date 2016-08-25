@@ -6,7 +6,7 @@ CREATE TABLE curso (
   bibliografia VARCHAR(200) NULL,
   modocurso VARCHAR(20) NULL,
   origemcurso VARCHAR(50) NULL,
-  situacao BOOL NULL,
+  situacao BOOLEAN NULL,
   PRIMARY KEY(cursoid)
 );
 
@@ -19,7 +19,7 @@ CREATE TABLE disciplina (
   conceito VARCHAR(100) NULL,
   ementa VARCHAR(80) NULL,
   datainicio DATE NOT NULL,
-  situacaodisciplina BOOL NOT NULL,
+  situacaodisciplina BOOLEAN NOT NULL,
   universidade VARCHAR(50) NULL,
   modalidade VARCHAR(50) NULL,
   PRIMARY KEY(disciplinaid)
@@ -70,7 +70,7 @@ CREATE TABLE auditoria (
 );
 
 CREATE TABLE pessoa (
-  Alunoid INTEGER UNSIGNED NOT NULL,
+  pessoaid INTEGER UNSIGNED NOT NULL,
   turma_turmaid INTEGER UNSIGNED NOT NULL,
   colaborador_idcolaborador INTEGER UNSIGNED NOT NULL,
   aluno_idaluno INTEGER UNSIGNED NOT NULL,
@@ -88,16 +88,16 @@ CREATE TABLE pessoa (
   estadocivil VARCHAR(20) NULL,
   datacadastro DATE NULL,
   grauescolaridade VARCHAR(50) NULL,
-  disciplinaextra BOOL NULL,
+  disciplinaextra BOOLEAN NULL,
   naturalidade VARCHAR(40) NULL,
   matricula VARCHAR(20) NULL,
-  PRIMARY KEY(Alunoid, turma_turmaid),
+  PRIMARY KEY(pessoaid, turma_turmaid),
   INDEX Table_02_FKIndex3(turma_turmaid),
   INDEX pessoa_FKIndex2(aluno_idaluno),
   INDEX pessoa_FKIndex3(colaborador_idcolaborador)
 );
 
-CREATE TABLE Grade (
+CREATE TABLE grade (
   gradeid INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   curso_cursoid INTEGER UNSIGNED NOT NULL,
   pessoa_turma_turmaid INTEGER UNSIGNED NOT NULL,
@@ -115,7 +115,7 @@ CREATE TABLE Grade (
   INDEX Grade_FKIndex2(curso_cursoid)
 );
 
-CREATE TABLE Gradedisciplina (
+CREATE TABLE gradedisciplina (
   Grade_gradeid INTEGER UNSIGNED NOT NULL,
   disciplina_disciplinaid INTEGER UNSIGNED NOT NULL,
   PRIMARY KEY(Grade_gradeid, disciplina_disciplinaid),
