@@ -21,27 +21,39 @@ BEGIN
 		SET texto := CONCAT('Nome do curso atualizado de ', OLD.cursonome, ' para ', NEW.cursonome);
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto);
-    ElseIf OLD.cargahoraria <> NEW.cargahoraria THEN
+    End If;
+
+    If OLD.cargahoraria <> NEW.cargahoraria THEN
 		SET texto := CONCAT('Carga Horária atualizada de ', OLD.cargahoraria, ' para ', NEW.cargahoraria);
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto);
-    ElseIf OLD.ementa <> NEW.ementa THEN
+    End If;
+
+    If OLD.ementa <> NEW.ementa THEN
 		SET texto := CONCAT('Ementa atualizada de ', OLD.ementa, ' para ', NEW.ementa);
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto);
-    ElseIf OLD.bibliografia <> NEW.bibliografia THEN
+    End If; 
+
+    If OLD.bibliografia <> NEW.bibliografia THEN
 		SET texto := CONCAT('Bibliografia atualizada de ', OLD.bibliografia, ' para ', NEW.bibliografia);
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto);
-    ElseIf OLD.modocurso <> NEW.modocurso THEN #Presencial ou Distancia
+    ENd IF;
+
+    If OLD.modocurso <> NEW.modocurso THEN #Presencial ou Distancia
 		SET texto := CONCAT('Modo do Curso atualizado de ', OLD.modocurso, ' para ', NEW.modocurso);
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto);
-    ElseIf OLD.origemcurso <> NEW.origemcurso THEN
+    End If;
+
+    If OLD.origemcurso <> NEW.origemcurso THEN
 		SET texto := CONCAT('Origem do Curso atualizada de ', OLD.origemcurso, ' para ', NEW.origemcurso);
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto); 
-    ElseIf OLD.situacao <> NEW.situacao THEN
+    End If;
+
+    If OLD.situacao <> NEW.situacao THEN
 		SET texto := CONCAT('Situação do Curso atualizado de ', situacaoDoCursoAntiga , ' para ', situacaoDoCurso );
 		INSERT INTO auditoria(colaborador_idcolaborador, aluno_idaluno, logdata, loghora, logtexto) 
 			VALUES(1, 1, CURRENT_DATE, CURRENT_TIME, texto);                

@@ -1,4 +1,5 @@
-<?php require_once "App/Views/cabecalho.php" ?>
+<?php include_once "App/Models/Conecta.php";
+ require_once "App/Views/cabecalho.php"; ?>
 <div class="container">
     <form class="row">
         <div class="form-group">
