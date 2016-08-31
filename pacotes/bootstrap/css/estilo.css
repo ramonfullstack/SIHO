@@ -1,5 +1,26 @@
-.img-responsive{
-    position: fixed;
-    border: 1px;
-    height: 500px;
+/*{
+	margin: 0;
+	padding: 0;
+}*/	
+
+.imagemIndex{
+    width:80%; /* Largura fixa para a div */
+	min-height:80%; /* Altura mínima */
+	height:auto !important; /* Altura ajustável de acordo com o conteúdo */
+	height:80%;
+	botto
+	/* Altura mínima para IE */
+	background-image: url("../img/cab4.jpg"); /* Aqui vai a mesma imagem que usamos acima */
+	background-size:100% 100%; /* Imagem ocupando toda largura e altura da div */
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+	-moz-background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.rodape{
+	bottom: 0px;
+	left: 0px;
+	position: fixed;
 }

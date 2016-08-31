@@ -2,9 +2,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../../pacotes/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../pacotes/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="../../pacotes/bootstrap/css/estilo.css"> 
 </head>
-<body>
-
+<body class="imagemIndex">
 	<div class="row-fluid col-md-2">
 		<p class="bg-primary">
 			<?php
@@ -14,9 +14,5 @@
 			?>
 		</p>
 	</div>
-	<div class="row col-md-4">
-		<figure>
-
-		</figure>	
-	</div>
+	
 
